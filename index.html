@@ -1,192 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="./assets/PRCROWN_dark.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" href="./assets/PRCROWN_light.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="./assets/PRCROWN.png" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>Prathyush N M</title>
-  <style>
-    canvas {
-      border: 1px solid #fff;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prathyush N M</title>
+<!-- This site has moved to prathyush.dev. The refresh below sends visitors (and search engines) there at once;
+     the old page is still in this repo's history. -->
+<link rel="canonical" href="https://prathyush.dev/">
+<meta http-equiv="refresh" content="0; url=https://prathyush.dev/">
+<script>location.replace('https://prathyush.dev/' + (location.hash === '#contact' ? 'contact' : ''));</script>
+<link rel="icon" type="image/png" href="./assets/PRCROWN.png">
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F5F4F1; color: #1D1D1F;
+         font: 400 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-align: center; }
+  a { color: #0068D6; }
+  @media (prefers-color-scheme: dark) { body { background: #000; color: #F5F5F7; } a { color: #3A9BFF; } }
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-wrapper">
-      <h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><span style="text-decoration: none;">🦉</span> Prathyush N. Mohan</a></h3>
-      <nav>
-        <a href="#contact" class="contact-link">
-          <button>Contact me</button>
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="hero">
-    <div>
-      <br>
-      <img class="profile-img" src="./assets/IMG_3495.JPG" />
-    </div>
-    <h1 id="heading" onclick="checkClick()">Hey, I'm Prathyush 🧑🏻‍💻☕️</h1>
-    <style>
-      a:hover {
-        color: darkgray;
-      }
-    </style>
-    <p>
-      <a href="https://www.mesce.ac.in/home">Student</a>, 
-      <a href="https://github.com/probablynotnmp">Developer</a>, 
-      <a href="https://www.behance.net/prathyush-nm">Designer</a>
-    </p>
-    <div style="text-align: center;">
-      <br>
-      <br>
-      <div>
-        <button class="resume-btn" onclick="window.location.href='assets/Prathyush-N-M-Resume.pdf'">Download Resume</button>
-        <button class="projects-btn" onclick="window.location.href='https://github.com/probablynotnmp?tab=repositories'" style="margin-left: 10px;">View my Projects</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="about">
-    <div class="about-wrapper">
-      <div class="col">
-        <h2>About Me</h2>
-        <p>
-        I have recently completed my Bachelor's in Artificial Intelligence and Data Science from APJ Abdul Kalam Technological University, a journey that has not only shaped my academic prowess but also fueled my passion for technology. My adventure in this realm is more than just obtaining a degree; it's about making a mark in the field of AI, ML, and DL, areas that I am deeply passionate about.
-        </p>
-      </div>
-      <div class="skills col">
-        <h2>My Skills</h2>
-        <ul>
-          <li>Python</li>
-          <li>Java</li>
-          <li>C++</li>
-          <li>JS</li>
-          <li>R</li>
-          <li>MongoDB</li>
-          <li>SQL</li>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>OpenCV</li>
-          <li>Scikit-Learn</li>
-          <li>Keras</li>
-          <li>Hadoop</li>
-          <li>PySpark</li>
-          <li>Excel</li>
-          <li>Tableau</li>
-          <li>Power BI</li>
-          <li>Azure</li>
-          <li>GCP</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="socials" id="contact">
-    <div class="socials-wrapper">
-      <div>
-        <h2>Contact Me</h2>
-        <p>contact.prathyushmohan@gmail.com</p>
-        <p>Palakkad, India</p>
-        <div class="availability">
-          <input type="hidden" id="availability-status" value="availabletowork">
-          <span id="availability-indicator" class="indicator available"></span>
-          <span id="availability-text">Available to work</span>
-        </div>
-      </div>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/prathyushnm"><img src="./assets/linkedin.svg" /></a>
-        <a href="https://github.com/probablynotnmp"><img src="./assets/github.svg" /></a>
-        <a href="https://x.com/prathyushnm"><img src="./assets/twitter.svg" /></a>
-        <a href="mailto:contact.prathyushmohan@gmail.com"><img src="./assets/mail.svg" /></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- POPUP -->
-  <div id="new-site-popup" class="popup">
-    <div class="popup-content">
-      <button class="close-popup" id="close-popup">&times;</button>
-      <h3>👋 Hey there!</h3>
-      <p>You’re viewing my old website, some of the information here might be outdated or no longer relevant</p>
-      <button class="visit-btn" onclick="window.location.href='https://prathyush.dev'">Visit the new site</button>
-    </div>
-  </div>
-
-  <script src="./pong.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    // --- Availability Logic ---
-    function toggleAvailability() {
-      const status = document.getElementById('availability-status').value;
-      const indicator = document.getElementById('availability-indicator');
-      const text = document.getElementById('availability-text');
-
-      if (status === 'availabletowork') {
-        indicator.classList.remove('availabletowork');
-        indicator.classList.add('unavailable');
-        text.textContent = 'Unavailable';
-        document.getElementById('availability-status').value = 'unavailable';
-      } else {
-        indicator.classList.remove('unavailable');
-        indicator.classList.add('availabletowork');
-        text.textContent = 'Available to work';
-        document.getElementById('availability-status').value = 'availabletowork';
-      }
-    }
-
-    // Initialise the current availability state
-    (function initializeAvailability() {
-      const status = document.getElementById('availability-status')?.value;
-      const indicator = document.getElementById('availability-indicator');
-      const text = document.getElementById('availability-text');
-
-      if (indicator && text) {
-        if (status === 'availabletowork') {
-          indicator.classList.add('availabletowork');
-          text.textContent = 'Available to work';
-        } else {
-          indicator.classList.add('unavailable');
-          text.textContent = 'Unavailable';
-        }
-      }
-    })();
-
-    // Make toggle function globally accessible
-    window.toggleAvailability = toggleAvailability;
-
-    // --- Popup Logic ---
-    const popup = document.getElementById('new-site-popup');
-    const closeBtn = document.getElementById('close-popup');
-
-    // Check if popup was closed during this browser session
-    const popupClosed = sessionStorage.getItem('popupClosed');
-
-    // Show popup after 6 seconds if not closed this session
-    setTimeout(() => {
-      if (popup && !popupClosed) {
-        popup.classList.add('show');
-      }
-    }, 6000);
-
-    // Close popup with fade-out animation and mark as closed for session
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        if (popup) {
-          popup.classList.remove('show');
-          popup.classList.add('hide');
-          sessionStorage.setItem('popupClosed', 'true');
-          setTimeout(() => (popup.style.display = 'none'), 400);
-        }
-      });
-    }
-  });
-</script>
+<p>My website has moved to <a href="https://prathyush.dev/">prathyush.dev</a>.</p>
 </body>
 </html>
